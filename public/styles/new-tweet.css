@@ -1,0 +1,38 @@
+
+section > form {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+}
+
+form > div {
+  /* background-color: blue; */
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-family: 'Bungee', sans-serif;
+  font-size: medium;
+}
+
+.new-tweet button {
+  background-color: #4056A1;
+  color: white;  
+
+}
+
+button:hover {
+ border-color: lightblue;
+ border: 3px;
+ translate: -0.25em;
+}
+
+textarea {
+  border: none;
+  background-color: #f4f1ec;
+  border-bottom: thick solid#849bbd;
+  padding-top: 0 0 10px;
+}
+
+section h2 {
+  color: #545149;
+}
