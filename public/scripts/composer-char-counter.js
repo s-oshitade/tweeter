@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $("#tweet-text").on("input", function () {
-    const input = $("#tweet-text").val();
+    const input = $(this).parent().find("#tweet-text").val(); //Traverse the DOM
     const charCount = input.length;
     const maxCount = 140;
     const charRemaining = maxCount - charCount;
