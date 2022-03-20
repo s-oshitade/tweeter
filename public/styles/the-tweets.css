@@ -1,0 +1,41 @@
+
+.the-tweets{
+  height: auto;
+  border: thick solid#849bbd;
+  margin: auto;
+}
+
+/* article.tweet > header {
+} */
+
+article.tweet {
+  width: 98%;
+  margin: auto;
+}
+
+article.tweet > header {
+  height: 25%;
+}
+article.tweet > p {
+  border-bottom: thick solid#849bbd;
+  height: auto;
+  margin: 40px 0 0;
+  padding-bottom: 20px;
+}
+article.tweet > footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+section.the-tweets i {
+  color: #4056A1;
+  font-size: small;
+  vertical-align: super;
+}
+
+section.the-tweets footer p {
+  vertical-align: super;
+  font-size: smaller;
+  margin: 0;
+}
