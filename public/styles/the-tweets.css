@@ -1,12 +1,13 @@
 
-.the-tweets{
+.the-tweets {
   height: auto;
   border: thick solid#849bbd;
   margin: auto;
 }
 
-/* article.tweet > header {
-} */
+.the-tweets:hover {
+  box-shadow: 10px 5px 5px gray;
+}
 
 article.tweet {
   width: 98%;
@@ -33,6 +34,11 @@ section.the-tweets i {
   font-size: small;
   vertical-align: super;
 }
+
+section.the-tweets i:hover {
+  color: goldenrod;
+}
+
 
 section.the-tweets footer p {
   vertical-align: super;
