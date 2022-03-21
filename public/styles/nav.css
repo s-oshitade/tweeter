@@ -9,11 +9,9 @@ nav {
   justify-content: space-between;
   align-content: center;
   font-size: 2rem;
+  position: fixed;
+  top: 0;
 }
-
-/* nav > span {  
-  font-family: 'Bungee', sans-serif;
-} */
 
 .navRight {
   display: flex;
