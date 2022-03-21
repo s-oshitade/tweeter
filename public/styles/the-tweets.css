@@ -14,28 +14,64 @@ article.tweet {
   margin: auto;
 }
 
-article.tweet > header {
-  height: 25%;
-}
 article.tweet > p {
   border-bottom: thick solid#849bbd;
   height: auto;
-  margin: 40px 0 0;
+  margin: 20px 0 10px;
   padding-bottom: 20px;
 }
+
+section.the-tweets .tweet-header {
+  vertical-align: super;
+  font-size: smaller;
+  margin-top: 10;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+section.the-tweets .tweet-header > div {
+  display: flex;
+}
+
+section.the-tweets #isaac {
+  vertical-align: super;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  padding: 2.5px;
+  top: 5px;
+}
+
+section.the-tweets .tweet-header > div > p { 
+  margin-top: 10px;
+  padding-left: 2.5px;
+  font-size: smaller;
+}
+
+section.the-tweets .tweet-header > p {
+  margin-top: 10px;
+  color: lightgrey;
+}
+
+section.the-tweets .tweet-header > p:hover {
+  color: darkgray;
+}
+
 article.tweet > footer {
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
 }
 
-section.the-tweets i {
+
+section.the-tweets footer i {
   color: #4056A1;
   font-size: small;
   vertical-align: super;
 }
 
-section.the-tweets i:hover {
+section.the-tweets footer i:hover {
   color: goldenrod;
 }
 
