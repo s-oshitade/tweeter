@@ -4,9 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// const $tweet = $(`<article class="tweet">Hello world</article>`);
-
-let $tweet =  {
+let tweetData =  {
   "user": {
     "name": "Newton",
     "avatars": "https://i.imgur.com/73hZDYK.png",
@@ -18,8 +16,7 @@ let $tweet =  {
   "created_at": 1461116232227
 }
 
-const createTweetElement = function (tweets){
-  const {user, content, created_at} = tweets;
+const createTweetElement = function ({ user, content, created_at }){
   return `<article class="tweet">
   <header class="tweet-header">
     <div>
@@ -45,5 +42,6 @@ const createTweetElement = function (tweets){
 </article>`;
 }
 
-const tweetEl = createTweetElement($tweet);
-$('.the-tweets').append(tweetEl)
+const $tweet = createTweetElement(tweetData);
+console.log($tweet);
+$('.the-tweets').append($tweet)
