@@ -88,7 +88,8 @@ renderTweets(data);
 $(function() {
   const $form = $('#new-tweet-form');
   $form.on('submit', function(event){
-    alert("Handler for .submit() called!");
     event.preventDefault();
+    alert("Handler for .submit() called!");
+    const str = $(this).serialize();
   })
 })
