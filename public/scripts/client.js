@@ -82,6 +82,13 @@ const renderTweets = function(tweets) {
   }
 }
 
-
-
 renderTweets(data);
+
+//Form submission using jQuery
+$(function() {
+  const $form = $('#new-tweet-form');
+  $form.on('submit', function(event){
+    alert("Handler for .submit() called!");
+    event.preventDefault();
+  })
+})
