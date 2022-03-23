@@ -77,7 +77,7 @@ const data = [
 const renderTweets = function(tweets) {
   for(const tweet of tweets){
     let $tweet = createTweetElement(tweet);
-    console.log($tweet);
+    // console.log($tweet);
     $('.the-tweets').append($tweet)
   }
 }
@@ -85,11 +85,30 @@ const renderTweets = function(tweets) {
 renderTweets(data);
 
 //Form submission using jQuery
+$(function () {
+  const submitPost = function () {
+    $.ajax({
+      url: "/tweets",
+      method: "POST",
+      success: (str) => {
+        console.log("str: ", str);
+        createTweetElement({ content: str });
+      },
+    });
+  };
+});
+
+
 $(function() {
   const $form = $('#new-tweet-form');
   $form.on('submit', function(event){
     event.preventDefault();
     alert("Handler for .submit() called!");
     const str = $(this).serialize();
+    const url = '/tweets';
+    $.post(url, str, function (response) {
+      console.log("response: ", response);
+      submitPost();
+    })
   })
 })
