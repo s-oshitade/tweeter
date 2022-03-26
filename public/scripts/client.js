@@ -54,15 +54,6 @@ const createTweetElement = function(tweet) {
 </article>`;
 };
 
-/**
- * createErrorMessages - Fxn creates html element for rendering error messages
- * @param {string} errorMessage;
- * @returns {object} error element
- */
-const createErrorElement = function(errorMessage){
-  return `<div class="error"><p>${errorMessage}</p></div>`;
-}
-
 // Fake data taken from initial-tweets.json
 const data = [
   {
