@@ -10,6 +10,11 @@ const escape = function (str) {
   return div.innerHTML;
 };
 
+//Hide the error message element once Document is loaded
+$(function() {
+  $('.error').hide();
+})
+
 let tweetData =  {
   "user": {
     "name": "Newton",
@@ -48,6 +53,15 @@ const createTweetElement = function(tweet) {
   </footer>
 </article>`;
 };
+
+/**
+ * createErrorMessages - Fxn creates html element fir rendering error messages
+ * @param {string} errorMessage;
+ * @returns {object} error element
+ */
+const createErrorElement = function(errorMessage){
+  return `<div class="error"><p>${errorMessage}</p></div>`;
+}
 
 // Fake data taken from initial-tweets.json
 const data = [
@@ -93,12 +107,20 @@ $(function() {
     event.preventDefault();
     //Add form validation criteria
     const $textarea = $('#tweet-text');
+    const $errorContainer = $(".error")
+    const errorMessage1 = "Empty tweet! Please say something.";
+    let $customErrorMessage1 = createErrorElement(errorMessage1);
+    const errorMessage2 = "Edit your tweet to 140 characters or less!";
+    let $customErrorMessage2 = createErrorElement(errorMessage2);
     if (!$textarea.val().trim()) { //Rule out blank inputs with .trim()
-      alert("Empty tweet! Please say something.");
-      return;
+      // alert("Empty tweet! Please say something.");
+      $errorContainer.empty();
+      $errorContainer.append($customErrorMessage1);
+      return
     }
     if ($textarea.val().length > 140) {
-      alert("Edit your tweet to 140 characters or less!");
+      $errorContainer.empty();
+      $errorContainer.append($customErrorMessage2);
       return;
     }
     //Serialize user input data
