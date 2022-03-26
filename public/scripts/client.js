@@ -75,40 +75,46 @@ const data = [
 ]
 
 const renderTweets = function(tweets) {
+  const $container = $('.the-tweets');
+  $container.empty();
   for(const tweet of tweets){
     let $tweet = createTweetElement(tweet);
     // console.log($tweet);
-    $('.the-tweets').append($tweet)
+    $container.prepend($tweet)
   }
 }
 
 renderTweets(data);
 
 //Form submission using jQuery
-$(function () {
-  const submitPost = function () {
-    $.ajax({
-      url: "/tweets",
-      method: "POST",
-      success: (str) => {
-        console.log("str: ", str);
-        createTweetElement({ content: str });
-      },
-    });
-  };
-});
-
-
 $(function() {
   const $form = $('#new-tweet-form');
   $form.on('submit', function(event){
     event.preventDefault();
-    alert("Handler for .submit() called!");
+    alert("Handler for submit event called!");
     const str = $(this).serialize();
-    const url = '/tweets';
-    $.post(url, str, function (response) {
-      console.log("response: ", response);
-      submitPost();
+    console.log("Serialized data:", str);
+    // $.post('/tweets', str, function (response) {
+    //   console.log("response: ", response);
+    // })
+    $.post('/tweets', str)
+    .then((resp) => {
+      console.log("Response: ", resp);
+      loadTweets();
     })
   })
+
+  const loadTweets = () => {$.ajax({
+    url: '/tweets',
+    method: "GET",
+    dataType: "json",
+    success: (data) => {
+      console.log(data);
+      renderTweets(data)
+    },
+    error: (error) => {
+      console.log(error);
+    }
+  })}
+  loadTweets();
 })
