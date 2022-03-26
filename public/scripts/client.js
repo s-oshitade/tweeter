@@ -1,5 +1,5 @@
 /**
- * Function escape to guard against XSS attack. 
+ * Function escape to guard against XSS. 
  * @param {string}
  * @returns {string};
  */
@@ -34,7 +34,7 @@ const createTweetElement = function(tweet) {
     </div>
     <p>${user.handle}</p>
   </header>
-  <p>${content.text}
+  <p>${escape(content.text)}
   </p> 
   <footer>
     <p>
