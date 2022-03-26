@@ -32,7 +32,7 @@ const createTweetElement = function (tweet){
   </p> 
   <footer>
     <p>
-      ${created_at}
+      ${timeago.format(created_at)}
     </p>
     <div>
       <i class="fa-solid fa-flag"></i>
@@ -42,7 +42,6 @@ const createTweetElement = function (tweet){
   </footer>
 </article>`;
 }
-// ${timeago.format(created_at)} Replace created at.
 
 // const $tweet = createTweetElement(tweetData);
 // console.log($tweet);
