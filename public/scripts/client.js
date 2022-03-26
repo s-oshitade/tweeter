@@ -1,3 +1,15 @@
+/**
+ * Function escape to guard against XSS attack. 
+ * @param {string}
+ * @returns {string};
+ */
+
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 let tweetData =  {
   "user": {
     "name": "Newton",
@@ -90,7 +102,7 @@ $(function() {
       return;
     }
     //Serialize user input data
-    alert("Handler for submit event called!");
+    // alert("Handler for submit event called!");
     const str = $(this).serialize();
     console.log("Serialized data:", str);
     // $.post('/tweets', str, function (response) {
