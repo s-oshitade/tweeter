@@ -55,7 +55,7 @@ const createTweetElement = function(tweet) {
 };
 
 /**
- * createErrorMessages - Fxn creates html element fir rendering error messages
+ * createErrorMessages - Fxn creates html element for rendering error messages
  * @param {string} errorMessage;
  * @returns {object} error element
  */
@@ -109,18 +109,18 @@ $(function() {
     const $textarea = $('#tweet-text');
     const $errorContainer = $(".error")
     const errorMessage1 = "Empty tweet! Please say something.";
-    let $customErrorMessage1 = createErrorElement(errorMessage1);
     const errorMessage2 = "Edit your tweet to 140 characters or less!";
-    let $customErrorMessage2 = createErrorElement(errorMessage2);
     if (!$textarea.val().trim()) { //Rule out blank inputs with .trim()
-      // alert("Empty tweet! Please say something.");
-      $errorContainer.empty();
-      $errorContainer.append($customErrorMessage1);
-      return
+      $('.error').text(`${errorMessage1}`);
+      $('.error').show();
+      if(($textarea.val().length > 0) && ($textarea.val().length > 0)){
+        $('.error').hide();
+      }
+      return;
     }
     if ($textarea.val().length > 140) {
-      $errorContainer.empty();
-      $errorContainer.append($customErrorMessage2);
+      $('.error').text(`${errorMessage2}`);
+      $('.error').show();
       return;
     }
     //Serialize user input data
