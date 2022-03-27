@@ -49,16 +49,18 @@
       <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <div class="error">
-          <i class="fa-solid fa-circle-exclamation"></i>
-          Error message will be displayed here.</div>
+        <div id="error-container">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <span id="error-message">This should not be  cleared.</span>
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
         <h2>Compose Tweet</h2>
         <form id="new-tweet-form">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div>
             <button type="submit" name="name">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <output name="counter" class="counter" id="count" for="tweet-text">140</output>
           </div>
         </form>
       </section >
