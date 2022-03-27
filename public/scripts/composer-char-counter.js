@@ -8,6 +8,9 @@ $(document).ready(function () {
     if (charCount > maxCount) {
       $(".counter").css("color", "red");
     }
+    if (charCount <= maxCount) {
+      $(".counter").css("color", "inherit");
+    }
   });
 });
 
