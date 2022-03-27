@@ -117,22 +117,22 @@ $(function() {
         return false;
       }
       return true;
-    };
-    displayErrors();
-    console.log(displayErrors());
-    // inputIsValid = displayErrors();
-    //Serialize user input data
-    // alert("Handler for submit event called!");
-    const str = $(this).serialize();
-    console.log("Serialized data:", str);
-    // $.post('/tweets', str, function (response) {
-    //loadTweets();
-    //   console.log("response: ", response);
-    // })
-    $.post('/tweets', str)
+    };  
+    inputIsValid = displayErrors();
+
+    if(inputIsValid){
+      //Serialize user input data
+      const str = $(this).serialize();
+      console.log("Serialized data:", str);
+
+      //Send ajax post request to the server with serialized input data
+      $.post("/tweets", str)
       .then((resp) => {
         loadTweets();
       });
+    }
+
+
   });
 
   const loadTweets = () => {
