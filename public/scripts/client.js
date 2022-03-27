@@ -109,7 +109,7 @@ $(function () {
         //Rule out blank inputs with .trim()
         $errorMessage.empty();
         $errorMessage.text(errorMessage1);
-        $errorContainer.show();
+        $errorContainer.slideDown();
         // if ($textarea.val().length > 0 && $textarea.val().length < 140) {
         //   $errorContainer.hide();
         // }
@@ -118,7 +118,7 @@ $(function () {
       if ($textarea.val().length > 140) {
         $errorMessage.empty();
         $errorMessage.text(errorMessage2);
-        $errorContainer.show();
+        $errorContainer.slideDown();
         return false;
       }
       return true;
@@ -127,7 +127,7 @@ $(function () {
     console.log("inputIsValid?: ", inputIsValid);
     //Handle valid form data
     if (inputIsValid) {
-      $errorContainer.hide();
+      $errorContainer.slideUp();
       //Serialize user input data
       const str = $(this).serialize();
       console.log("Serialized data:", str);
