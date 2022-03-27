@@ -101,19 +101,26 @@ $(function() {
     const $errorContainer = $(".error")
     const errorMessage1 = "Empty tweet! Please say something.";
     const errorMessage2 = "Edit your tweet to 140 characters or less!";
-    if (!$textarea.val().trim()) { //Rule out blank inputs with .trim()
-      $('.error').text(`${errorMessage1}`);
-      $('.error').show();
-      if(($textarea.val().length > 0) && ($textarea.val().length > 0)){
-        $('.error').hide();
+    const displayErrors = function () {
+      if (!$textarea.val().trim()) {
+        //Rule out blank inputs with .trim()
+        $errorContainer.text(`${errorMessage1}`);
+        $errorContainer.show();
+        if ($textarea.val().length > 0 && $textarea.val().length > 0) {
+          $(".error").hide();
+        }
+        return false;
       }
-      return;
-    }
-    if ($textarea.val().length > 140) {
-      $('.error').text(`${errorMessage2}`);
-      $('.error').show();
-      return;
-    }
+      if ($textarea.val().length > 140) {
+        $(".error").text(`${errorMessage2}`);
+        $(".error").show();
+        return false;
+      }
+      return true;
+    };
+    displayErrors();
+    console.log(displayErrors());
+    // inputIsValid = displayErrors();
     //Serialize user input data
     // alert("Handler for submit event called!");
     const str = $(this).serialize();
