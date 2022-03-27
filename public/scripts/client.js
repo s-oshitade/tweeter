@@ -101,25 +101,26 @@ $(function () {
     const $errorContainer = $(".error");
     const errorMessage1 = "Empty tweet! Please say something.";
     const errorMessage2 = "Edit your tweet to 140 characters or less!";
+    
     const displayErrors = function () {
       if (!$textarea.val().trim()) {
         //Rule out blank inputs with .trim()
         $errorContainer.text(`${errorMessage1}`);
         $errorContainer.show();
-        if ($textarea.val().length > 0 && $textarea.val().length > 0) {
+        if ($textarea.val().length > 0 && $textarea.val().length < 140) {
           $(".error").hide();
         }
         return false;
       }
       if ($textarea.val().length > 140) {
-        $(".error").text(`${errorMessage2}`);
+        $(".error").text(errorMessage2);
         $(".error").show();
         return false;
       }
       return true;
     };
     inputIsValid = displayErrors();
-    
+    console.log(inputIsValid);
     //Handle valid form data
     if (inputIsValid) {
       //Serialize user input data
@@ -133,20 +134,21 @@ $(function () {
     }
 
     //Render serialized data from the server back to the browser without page roload
-    const loadTweets = function () {
-      $.ajax({
-        url: "/tweets",
-        method: "GET",
-        dataType: "json",
-        success: (data) => {
-          console.log(data);
-          renderTweets(data);
-        },
-        error: (error) => {
-          console.log(error);
-        },
-      });
-    };
-    loadTweets();
   });
+  const loadTweets = function () {
+    $.ajax({
+      url: "/tweets",
+      method: "GET",
+      dataType: "json",
+      success: (data) => {
+        console.log(data);
+        $("#tweet-text").val("");
+        renderTweets(data);
+      },
+      error: (error) => {
+        console.log(error);
+      },
+    });
+  };
+  loadTweets();
 });
