@@ -10,9 +10,9 @@ const escape = function (str) {
   return div.innerHTML;
 };
 
-//Hide the error message element once Document is loaded
+//Hide the error container once Document is loaded
 $(function() {
-  $('.error').hide();
+  $('#error-container').hide();
 })
 
 let tweetData =  {
@@ -99,32 +99,34 @@ $(function () {
     $('.error').slideUp();
     //Add form validation criteria
     const $textarea = $("#tweet-text");
-    const $errorContainer = $(".error");
+    const $errorContainer = $("#error-container");
+    const $errorMessage = $("#error-message");
     const errorMessage1 = "Empty tweet! Please say something.";
     const errorMessage2 = "Edit your tweet to 140 characters or less!";
     
     const displayErrors = function () {
       if (!$textarea.val().trim()) {
         //Rule out blank inputs with .trim()
-        $errorContainer.text(`${errorMessage1}`);
+        $errorMessage.empty();
+        $errorMessage.text(errorMessage1);
         $errorContainer.show();
-        if ($textarea.val().length > 0 && $textarea.val().length < 140) {
-          $(".error").hide();
-        }
+        // if ($textarea.val().length > 0 && $textarea.val().length < 140) {
+        //   $errorContainer.hide();
+        // }
         return false;
       }
       if ($textarea.val().length > 140) {
-        $(".error").text(errorMessage2);
+        $(".error").append(errorMessage2);
         $(".error").show();
         return false;
       }
       return true;
     };
     inputIsValid = displayErrors();
-    console.log(inputIsValid);
+    console.log("inputIsValid?: ", inputIsValid);
     //Handle valid form data
     if (inputIsValid) {
-
+      $errorContainer.hide();
       //Serialize user input data
       const str = $(this).serialize();
       console.log("Serialized data:", str);
