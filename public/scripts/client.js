@@ -96,6 +96,7 @@ $(function () {
   const $form = $("#new-tweet-form");
   $form.on("submit", function (event) {
     event.preventDefault();
+    $('.error').slideUp();
     //Add form validation criteria
     const $textarea = $("#tweet-text");
     const $errorContainer = $(".error");
@@ -123,6 +124,7 @@ $(function () {
     console.log(inputIsValid);
     //Handle valid form data
     if (inputIsValid) {
+
       //Serialize user input data
       const str = $(this).serialize();
       console.log("Serialized data:", str);
@@ -133,8 +135,9 @@ $(function () {
       });
     }
 
-    //Render serialized data from the server back to the browser without page roload
   });
+
+  //Render serialized data from the server back to the browser without page roload
   const loadTweets = function () {
     $.ajax({
       url: "/tweets",
