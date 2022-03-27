@@ -116,8 +116,9 @@ $(function () {
         return false;
       }
       if ($textarea.val().length > 140) {
-        $(".error").append(errorMessage2);
-        $(".error").show();
+        $errorMessage.empty();
+        $errorMessage.text(errorMessage2);
+        $errorContainer.show();
         return false;
       }
       return true;
