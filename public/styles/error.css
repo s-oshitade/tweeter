@@ -1,8 +1,10 @@
-.error {
+#error-container {
   color: red;
   background-color: rgba(255, 255, 255, 0.2);
   border: thin solid red;
-  border-radius: 0.5;
   padding: 0 20px;
-  /* text-align: center; */
+}
+
+#error-message {
+  color: red;
 }
