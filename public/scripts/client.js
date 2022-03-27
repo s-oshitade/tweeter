@@ -92,13 +92,13 @@ const renderTweets = function(tweets) {
 renderTweets(data);
 
 //Form submission using jQuery
-$(function() {
-  const $form = $('#new-tweet-form');
-  $form.on('submit', function(event) {
+$(function () {
+  const $form = $("#new-tweet-form");
+  $form.on("submit", function (event) {
     event.preventDefault();
     //Add form validation criteria
-    const $textarea = $('#tweet-text');
-    const $errorContainer = $(".error")
+    const $textarea = $("#tweet-text");
+    const $errorContainer = $(".error");
     const errorMessage1 = "Empty tweet! Please say something.";
     const errorMessage2 = "Edit your tweet to 140 characters or less!";
     const displayErrors = function () {
@@ -117,37 +117,36 @@ $(function() {
         return false;
       }
       return true;
-    };  
+    };
     inputIsValid = displayErrors();
-
-    if(inputIsValid){
+    
+    //Handle valid form data
+    if (inputIsValid) {
       //Serialize user input data
       const str = $(this).serialize();
       console.log("Serialized data:", str);
 
       //Send ajax post request to the server with serialized input data
-      $.post("/tweets", str)
-      .then((resp) => {
+      $.post("/tweets", str).then((resp) => {
         loadTweets();
       });
     }
 
-
+    //Render serialized data from the server back to the browser without page roload
+    const loadTweets = function () {
+      $.ajax({
+        url: "/tweets",
+        method: "GET",
+        dataType: "json",
+        success: (data) => {
+          console.log(data);
+          renderTweets(data);
+        },
+        error: (error) => {
+          console.log(error);
+        },
+      });
+    };
+    loadTweets();
   });
-
-  const loadTweets = () => {
-    $.ajax({
-      url: '/tweets',
-      method: "GET",
-      dataType: "json",
-      success: (data) => {
-        console.log(data);
-        renderTweets(data);
-      },
-      error: (error) => {
-        console.log(error);
-      }
-    });
-  };
-  loadTweets();
 });
