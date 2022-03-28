@@ -1,0 +1,17 @@
+/* Tablet: minimum width of 768px to maximum width of 1024px */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+ main {
+   width: 45%;
+   background-color: red;
+ }
+
+ .main-header {
+   width: 40%;
+ }
+
+}
+
+/* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width: 1024px) {
+
+}
