@@ -1,12 +1,28 @@
 /* Tablet: minimum width of 768px to maximum width of 1024px */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+.media-flex {
+  display: flex;
+  position: relative;
+  top: 150px;
+  width: 90%;
+  margin: auto;
+  
+}
+
+nav {
+  z-index: 1;
+}
  main {
    width: 45%;
-   background-color: red;
+   position: relative;
+   top: -16px;
  }
 
  .main-header {
    width: 40%;
+   top: 20px;
+   position: relative;
+
  }
 
 }
