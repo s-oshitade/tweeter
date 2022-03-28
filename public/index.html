@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/the-tweets.css" type="text/css" />
     <link rel="stylesheet" href="/styles/error.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/media.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -37,35 +38,37 @@
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
-    <header class="main-header">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2>Seun-O</h2>
-      </div>
-    </header>
-      <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <div id="error-container">
-          <i class="fa-solid fa-triangle-exclamation"></i>
-          <span id="error-message">This should not be  cleared.</span>
-          <i class="fa-solid fa-triangle-exclamation"></i>
+    <div class="media-flex">
+      <header class="main-header">
+        <div>
+            <img src="/images/profile-hex.png"> 
         </div>
-        <h2>Compose Tweet</h2>
-        <form id="new-tweet-form">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div>
-            <button type="submit" name="name">Tweet</button>
-            <output name="counter" class="counter" id="count" for="tweet-text">140</output>
+        <br>
+        <div>
+            <h2 id="username">Seun-O</h2>
+        </div>
+      </header>
+        <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <div id="error-container">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span id="error-message">This should not be  cleared.</span>
+            <i class="fa-solid fa-triangle-exclamation"></i>
           </div>
-        </form>
-      </section >
-      <section class="the-tweets"> </section>
-    </main>
+          <h2>Compose Tweet</h2>
+          <form id="new-tweet-form">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div>
+              <button type="submit" name="name">Tweet</button>
+              <output name="counter" class="counter" id="count" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section >
+        <section class="the-tweets"> </section>
+      </main>
+    </div>
   </body>
 </html>
 
