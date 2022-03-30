@@ -5,7 +5,7 @@
   margin: auto;
 }
 
-.the-tweets:hover {
+article:hover {
   box-shadow: 10px 5px 5px gray;
 }
 
@@ -35,6 +35,12 @@ section.the-tweets .tweet-header {
 
 section.the-tweets .tweet-header > div {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.the-tweets .tweet-header img {
+  width: 50px;
 }
 
 section.the-tweets #isaac {
