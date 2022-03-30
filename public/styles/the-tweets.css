@@ -1,7 +1,7 @@
 
 .the-tweets {
   height: auto;
-  border: thick solid#849bbd;
+  /* border: thick solid#849bbd; */
   margin: auto;
 }
 
@@ -11,20 +11,23 @@
 
 article.tweet {
   width: 98%;
-  margin: auto;
+  border: thick solid#849bbd;
+  margin: 20px auto 10px;
 }
 
 article.tweet > p {
   border-bottom: thick solid#849bbd;
+  width: 90%;
   height: auto;
-  margin: 20px 0 10px;
+  margin: 20px auto 10px;
   padding-bottom: 20px;
 }
 
 section.the-tweets .tweet-header {
   vertical-align: super;
+  width: 90%;
   font-size: smaller;
-  margin-top: 10;
+  margin: 10px auto 0;
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -44,7 +47,8 @@ section.the-tweets #isaac {
 }
 
 section.the-tweets .tweet-header > div > p { 
-  margin-top: 10px;
+  /* width: 90%;
+  margin-top: 10px auto 0; */
   padding-left: 2.5px;
   font-size: smaller;
 }
@@ -52,6 +56,8 @@ section.the-tweets .tweet-header > div > p {
 section.the-tweets .tweet-header > p {
   margin-top: 10px;
   color: lightgrey;
+  /* width: 90%;
+  margin: auto; */
 }
 
 section.the-tweets .tweet-header > p:hover {
@@ -62,6 +68,8 @@ article.tweet > footer {
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
+  width: 90%;
+  margin: auto;
 }
 
 
