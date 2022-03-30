@@ -1,0 +1,55 @@
+/* Tablet: minimum width of 768px to maximum width of 1024px */
+@media only screen and (min-width: 768px) {
+.media-flex {
+  display: flex;
+  position: relative;
+  top: 30px;
+  width: 90%;
+  margin: auto;
+  
+}
+
+nav {
+  z-index: 1;
+  position: relative;
+  width: 90%;
+  margin: auto;
+  background-color: #4056A1;
+}
+
+.main-header {
+  width: 40%;
+  top: 20px;
+  position: relative;
+  left: 2.5%;
+  margin-right: 2.5%;
+  background-color: #EBA83A;
+}
+
+ main {
+   width: 50%;
+   position: relative;
+   top: -16px;
+   margin-left: 5%;
+  }
+}
+
+/*Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width: 1024px) {
+  nav {
+    max-width: 1024px;
+    margin: auto;
+  }
+  .media-flex {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  
+  #username {
+    color: #4056A1;
+  }
+
+  #new-tweet-form button {
+    color: tomato;
+  }
+}

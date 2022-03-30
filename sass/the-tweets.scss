@@ -1,0 +1,91 @@
+
+.the-tweets {
+  height: auto;
+  /* border: thick solid#849bbd; */
+  margin: auto;
+}
+
+.the-tweets:hover {
+  box-shadow: 10px 5px 5px gray;
+}
+
+article.tweet {
+  width: 98%;
+  border: thick solid#849bbd;
+  margin: 20px auto 10px;
+}
+
+article.tweet > p {
+  border-bottom: thick solid#849bbd;
+  width: 90%;
+  height: auto;
+  margin: 20px auto 10px;
+  padding-bottom: 20px;
+}
+
+section.the-tweets .tweet-header {
+  vertical-align: super;
+  width: 90%;
+  font-size: smaller;
+  margin: 10px auto 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+section.the-tweets .tweet-header > div {
+  display: flex;
+}
+
+section.the-tweets #isaac {
+  vertical-align: super;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  padding: 2.5px;
+  top: 5px;
+}
+
+section.the-tweets .tweet-header > div > p { 
+  /* width: 90%;
+  margin-top: 10px auto 0; */
+  padding-left: 2.5px;
+  font-size: smaller;
+}
+
+section.the-tweets .tweet-header > p {
+  margin-top: 10px;
+  color: lightgrey;
+  /* width: 90%;
+  margin: auto; */
+}
+
+section.the-tweets .tweet-header > p:hover {
+  color: darkgray;
+}
+
+article.tweet > footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  width: 90%;
+  margin: auto;
+}
+
+
+section.the-tweets footer i {
+  color: #4056A1;
+  font-size: small;
+  vertical-align: super;
+}
+
+section.the-tweets footer i:hover {
+  color: goldenrod;
+}
+
+
+section.the-tweets footer p {
+  vertical-align: super;
+  font-size: smaller;
+  margin: 0;
+}
