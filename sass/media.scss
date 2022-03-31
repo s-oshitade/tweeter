@@ -12,7 +12,6 @@
 nav {
   z-index: 1;
   position: relative;
-  width: 90%;
   margin: auto;
   background-color: #4056A1;
 }
@@ -36,10 +35,6 @@ nav {
 
 /*Laptops / Desktops: minimum width of 1024px */
 @media only screen and (min-width: 1024px) {
-  nav {
-    max-width: 1024px;
-    margin: auto;
-  }
   .media-flex {
     max-width: 1024px;
     margin: 0 auto;
