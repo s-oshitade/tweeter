@@ -1,3 +1,4 @@
+
 .the-tweets {
   height: auto;
   /* border: thick solid#849bbd; */
@@ -10,12 +11,12 @@
 
 article.tweet {
   width: 98%;
-  border: thick solid #849bbd;
+  border: thick solid#849bbd;
   margin: 20px auto 10px;
 }
 
 article.tweet > p {
-  border-bottom: thick solid #849bbd;
+  border-bottom: thick solid#849bbd;
   width: 90%;
   height: auto;
   margin: 20px auto 10px;
@@ -45,7 +46,7 @@ section.the-tweets #isaac {
   top: 5px;
 }
 
-section.the-tweets .tweet-header > div > p {
+section.the-tweets .tweet-header > div > p { 
   /* width: 90%;
   margin-top: 10px auto 0; */
   padding-left: 2.5px;
@@ -71,6 +72,7 @@ article.tweet > footer {
   margin: auto;
 }
 
+
 section.the-tweets footer i {
   color: #4056A1;
   font-size: small;
@@ -80,6 +82,7 @@ section.the-tweets footer i {
 section.the-tweets footer i:hover {
   color: goldenrod;
 }
+
 
 section.the-tweets footer p {
   vertical-align: super;
