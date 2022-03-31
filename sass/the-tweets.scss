@@ -1,12 +1,7 @@
 
 .the-tweets {
   height: auto;
-  /* border: thick solid#849bbd; */
   margin: auto;
-}
-
-.the-tweets:hover {
-  box-shadow: 10px 5px 5px gray;
 }
 
 article.tweet {
@@ -15,6 +10,9 @@ article.tweet {
   margin: 20px auto 10px;
 }
 
+article.tweet:hover{
+  box-shadow: 10px 5px 5px gray;
+}
 article.tweet > p {
   border-bottom: thick solid#849bbd;
   width: 90%;
