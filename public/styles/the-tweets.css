@@ -36,7 +36,7 @@ section.the-tweets .tweet-header > div {
   display: flex;
 }
 
-section.the-tweets #isaac {
+section.the-tweets #user-image {
   vertical-align: super;
   width: 2rem;
   height: 2rem;

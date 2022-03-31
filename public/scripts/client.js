@@ -32,7 +32,7 @@ const createTweetElement = function(tweet) {
   return `<article class="tweet">
   <header class="tweet-header">
     <div>
-      <img src=${user.avatars} alt="image of tweeter account owner">
+      <img id="user-image" src=${user.avatars} alt="image of tweeter account owner">
       <p>
         ${user.name}
       </p> 
