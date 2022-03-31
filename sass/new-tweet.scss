@@ -11,12 +11,12 @@ form > div {
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
-  font-family: 'Bungee', sans-serif;
+  font-family: $secondary-fontstack;
   font-size: medium;
 }
 
 .new-tweet button {
-  background-color: #4056A1;
+  background-color: $background-color1;
   color: white;  
 
 }
@@ -29,7 +29,7 @@ button:hover {
 
 textarea {
   border: none;
-  background-color: #f4f1ec;
+  background-color: $background-body;
   border-bottom: thick solid#849bbd;
   padding-top: 0 0 10px;
 }

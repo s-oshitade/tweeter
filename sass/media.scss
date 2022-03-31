@@ -15,7 +15,7 @@ nav {
   z-index: 1;
   position: relative;
   margin: auto;
-  background-color: #4056A1;
+  background-color: $background-color1;
 }
 
 .main-header {
@@ -24,9 +24,7 @@ nav {
   position: relative;
   left: 2.5%;
   margin-right: 2.5%;
-  background-color: #EBA83A;
   background-color: $background-color2;
-
 }
 
  main {
@@ -45,10 +43,10 @@ nav {
   }
   
   #username {
-    color: #4056A1;
+    color: $background-color1;
   }
 
   #new-tweet-form button {
-    color: tomato;
+    color: $color-accent;
   }
 }

@@ -7,7 +7,7 @@
 
 article.tweet {
   width: 98%;
-  border: thick solid#849bbd;
+  border: $border1;
   margin: 20px auto 10px;
 }
 
@@ -15,7 +15,7 @@ article.tweet:hover{
   box-shadow: 10px 5px 5px gray;
 }
 article.tweet > p {
-  border-bottom: thick solid#849bbd;
+  border-bottom: $border1;
   width: 90%;
   height: auto;
   margin: 20px auto 10px;
