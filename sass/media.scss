@@ -1,3 +1,5 @@
+@import "_variables";
+
 /* Tablet: minimum width of 768px to maximum width of 1024px */
 @media only screen and (min-width: 768px) {
 .media-flex {
@@ -23,6 +25,8 @@ nav {
   left: 2.5%;
   margin-right: 2.5%;
   background-color: #EBA83A;
+  background-color: $background-color2;
+
 }
 
  main {
