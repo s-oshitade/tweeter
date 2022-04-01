@@ -4,10 +4,13 @@
 This project was completed by [me](https://www.linkedin.com/in/seun-oshitade-53001120b/) as part of my learnings at Lighthouse Labs. Tweeter is a simple, single-page Twitter clone, where users can create short posts of up to 140 characters and append them to the main page. Buidling on the previous projects in backend development and asnchronous javascript, this project was focused mainly on the client side of web development while using a pre-built back-end. It was an opportunity to gain further experience in using HTML, CSS, CSS-preprocessor (SASS/SCSS), jQuery, Ajax, DOM manipulation, node, express and client-side javascript programming.
 
 ## Final Product
-![gif of mobile screen size](https://github.com/s-oshitade/tweeter/blob/master/docs/tweeter.gif?raw=true)
+### `Mobile screen-size`
+![gif of mobile screen-size](https://github.com/s-oshitade/tweeter/blob/master/docs/tweeter.gif?raw=true)
 
+### `Tablet screen-size`
 ![tablet-size screen](https://github.com/s-oshitade/tweeter/blob/master/docs/tablet-view.jpeg?raw=true)
 
+### `Extra-large screen-size `
 ![very-large screen](https://github.com/s-oshitade/tweeter/blob/master/docs/very-large-screen.jpeg?raw=true)
 
 ## Dependencies
