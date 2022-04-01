@@ -122,13 +122,11 @@ $(function() {
       return true;
     };
     inputIsValid = displayErrors();
-    console.log("inputIsValid?: ", inputIsValid);
     //Handle valid form data
     if (inputIsValid) {
       $errorContainer.slideUp();
       //Serialize user input data
       const str = $(this).serialize();
-      console.log("Serialized data:", str);
 
       //Send ajax post request to the server with serialized input data
       $.post("/tweets", str).then((resp) => {
@@ -145,7 +143,6 @@ $(function() {
       method: "GET",
       dataType: "json",
       success: (data) => {
-        console.log(data);
         $("#tweet-text").val("");
         renderTweets(data);
       },
