@@ -31,17 +31,16 @@ section.the-tweets .tweet-header {
   justify-content: space-between;
 }
 
-section.the-tweets .tweet-header > div {
+.avatar-name {
   display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-section.the-tweets #user-image {
-  vertical-align: super;
+#user-image {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  padding: 2.5px;
-  top: 5px;
 }
 
 section.the-tweets .tweet-header > div > p {
