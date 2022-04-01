@@ -13,17 +13,15 @@ nav {
   font-size: 2rem;
   position: fixed;
   top: 0;
-}
-
-.navRight {
+  .navRight {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: $primary-fontstack;
   font-size: 1.5rem;
-}
-
-i {
+  }
+  i {
   color:$color-accent;
   padding: 0.3rem;
+}
 }

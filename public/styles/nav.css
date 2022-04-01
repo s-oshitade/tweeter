@@ -12,16 +12,14 @@ nav {
   position: fixed;
   top: 0;
 }
-
-.navRight {
+nav .navRight {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.5rem;
 }
-
-i {
+nav i {
   color: #ff6347;
   padding: 0.3rem;
 }
