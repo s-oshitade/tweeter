@@ -3,14 +3,13 @@
   .media-flex {
     display: flex;
     position: relative;
-    top: 30px;
+    top: 140px;
     width: 90%;
     margin: auto;
   }
 
   nav {
     z-index: 1;
-    position: relative;
     margin: auto;
     background-color: #4056A1;
   }
