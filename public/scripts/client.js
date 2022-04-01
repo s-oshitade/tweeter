@@ -31,7 +31,7 @@ const createTweetElement = function(tweet) {
   const { user, content, created_at } = tweet;
   return `<article class="tweet">
   <header class="tweet-header">
-    <div>
+    <div class="avatar-name">
       <img id="user-image" src=${user.avatars} alt="image of tweeter account owner">
       <p>
         ${user.name}
