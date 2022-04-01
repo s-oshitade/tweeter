@@ -1,10 +1,10 @@
 /**
- * Function escape to guard against XSS. 
+ * Function escape to guard against XSS.
  * @param {string}
  * @returns {string};
  */
 
-const escape = function (str) {
+const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -13,7 +13,7 @@ const escape = function (str) {
 //Hide the error container once Document is loaded
 $(function() {
   $('#error-container').hide();
-})
+});
 
 let tweetData =  {
   "user": {
@@ -27,6 +27,7 @@ let tweetData =  {
   "created_at": 1461116232227
 };
 
+//Function createTweetElement accepts tweets (json object) and returns element wrapped in string literals
 const createTweetElement = function(tweet) {
   const { user, content, created_at } = tweet;
   return `<article class="tweet">
@@ -54,7 +55,7 @@ const createTweetElement = function(tweet) {
 </article>`;
 };
 
-// Fake data taken from initial-tweets.json
+// Given data from initial-tweets.json
 const data = [
   {
     "user": {
@@ -92,9 +93,9 @@ const renderTweets = function(tweets) {
 renderTweets(data);
 
 //Form submission using jQuery
-$(function () {
+$(function() {
   const $form = $("#new-tweet-form");
-  $form.on("submit", function (event) {
+  $form.on("submit", function(event) {
     event.preventDefault();
     $('.error').slideUp();
     //Add form validation criteria
@@ -104,15 +105,12 @@ $(function () {
     const errorMessage1 = "Empty tweet! Please say something.";
     const errorMessage2 = "Edit your tweet to 140 characters or less!";
     
-    const displayErrors = function () {
+    const displayErrors = function() {
       if (!$textarea.val().trim()) {
         //Rule out blank inputs with .trim()
         $errorMessage.empty();
         $errorMessage.text(errorMessage1);
         $errorContainer.slideDown();
-        // if ($textarea.val().length > 0 && $textarea.val().length < 140) {
-        //   $errorContainer.hide();
-        // }
         return false;
       }
       if ($textarea.val().length > 140) {
@@ -141,7 +139,7 @@ $(function () {
   });
 
   //Render serialized data from the server back to the browser without page roload
-  const loadTweets = function () {
+  const loadTweets = function() {
     $.ajax({
       url: "/tweets",
       method: "GET",
