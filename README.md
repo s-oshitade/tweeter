@@ -34,6 +34,7 @@ This project was completed by [me](https://www.linkedin.com/in/seun-oshitade-530
 3. Install dependencies using the `npm install` command.
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
+5. To edit the CSS styling, use the `npm run sass-watch` command and effect the changes on the .scss files. Do not edit the css files directly.
 
 ## Acknowledgement
 Credit to the community of instructors and mentors at Lighthouse Labs for providing necessary guidance in the course of this project.
