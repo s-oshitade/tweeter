@@ -7,20 +7,12 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
 body {
   color: #545149;
   background-color: $background-body;
   font-size: 24px;
   font-family: $primary-fontstack;
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 
 main {
   width: 90%;

@@ -6,9 +6,6 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -16,9 +13,6 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 main {
   width: 90%;
   height: 600px;

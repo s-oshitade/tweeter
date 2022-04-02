@@ -33,8 +33,6 @@ section.the-tweets .tweet-header {
 
 .avatar-name {
   display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 #user-image {
@@ -44,8 +42,6 @@ section.the-tweets .tweet-header {
 }
 
 section.the-tweets .tweet-header > div > p {
-  /* width: 90%;
-  margin-top: 10px auto 0; */
   padding-left: 2.5px;
   font-size: smaller;
 }
@@ -53,8 +49,6 @@ section.the-tweets .tweet-header > div > p {
 section.the-tweets .tweet-header > p {
   margin-top: 10px;
   color: lightgrey;
-  /* width: 90%;
-  margin: auto; */
 }
 
 section.the-tweets .tweet-header > p:hover {
