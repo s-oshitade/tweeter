@@ -1,11 +1,9 @@
 section > form {
-  /* background-color: red; */
   display: flex;
   flex-direction: column;
 }
 
 form > div {
-  /* background-color: blue; */
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
